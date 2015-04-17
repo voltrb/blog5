@@ -1,0 +1,20 @@
+<:Title>
+  Blog
+
+<:Body>
+  <div class="row">
+    <div class="col-md-8">
+      <h1>{{ store._blog_posts.size }} Posts</h1>
+    </div>
+    <div class="col-md-4 search-bar">
+      <:fields:text label="Search Posts:" value="{{ page._query }}" />
+    </div>
+  </div>
+  <div class="row">
+
+    {{ paginated_posts.each do |blog_post| }}
+      <:blog:post model="{{ blog_post }}" />
+    {{ end }}
+
+    <:pagination total="{{ searched_posts.size }}" per_page="{{ per_page }}" />
+  </div>

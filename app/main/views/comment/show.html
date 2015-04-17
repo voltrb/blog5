@@ -1,0 +1,11 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    {{ if true || Volt.current_user? }}
+      <button style="float: right;margin-left: 10px;" e-click="model.destroy">X</button>
+    {{ end }}
+
+    <h4>{{ _name }}</h4>
+    <p>{{ _body }}</p>
+
+  </div>
+</div>

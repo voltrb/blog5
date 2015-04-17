@@ -1,0 +1,15 @@
+<:Title>
+  {{ _title }}
+
+<:Body>
+  <h1>{{ _title }}</h1>
+
+  <p>{{ raw _body }}</p>
+
+  <hr />
+
+  {{ _comments.each do |comment| }}
+    <:comment:show model="{{comment}}" />
+  {{ end }}
+
+  <:comment:new blog_post="{{ model }}" />
