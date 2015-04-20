@@ -1,4 +1,12 @@
-# Place your app's docs here.
+# Sample Blog App
 
-## New to Volt?
-Be sure to read the volt docs at http://docs.voltframework.com
+A sample blog app written in volt.  Just to demo code, no user auth yet.
+
+To Run, start mongodb in one terminal:
+
+    mongod
+
+Then run the project:
+
+    bundle install
+    volt server
