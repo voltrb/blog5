@@ -9,11 +9,11 @@ module Main
     end
 
     def edit
-      self.model = store._blog_posts.where(_id: params._id).fetch_first.then(&:buffer)
+      self.model = store._blog_posts.where(id: params.id).fetch_first.then(&:buffer)
     end
 
     def show
-      self.model = store._blog_posts.where(_id: params._id).fetch_first
+      self.model = store._blog_posts.where(id: params.id).fetch_first
     end
 
     def post

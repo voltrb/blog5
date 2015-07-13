@@ -8,10 +8,11 @@ module Main
     def searched_posts
       query = { '$regex' => page._query || '', '$options' => 'i' }
 
-      store._blog_posts.where({'$or' => [
-        {body: query},
-        {title: query}
-      ]})
+      store._blog_posts.all
+      # store._blog_posts.where({'$or' => [
+      #   {body: query},
+      #   {title: query}
+      # ]})
     end
 
     def paginated_posts
